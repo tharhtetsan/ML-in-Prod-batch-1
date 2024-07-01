@@ -86,10 +86,10 @@
 |-----|-----|-----|-----|
 | 1-12-2024| Generative AI (Image - 2)  | UNet, Pix2Pix | - |
 | 7-12-2024| Generative AI (Image - 2) | UNet, Pix2Pix | - |
-| 8-12-2024| LangChain  | UNet, Pix2Pix | - |
-| 14-12-2024| LangChain  | UNet, Pix2Pix | - |
-| 15-12-2024| LangChain Memory Usage and Agent Creation | UNet, Pix2Pix | - |
-| 21-12-2024| Retrieval Augmented Generation (RAG)  | UNet, Pix2Pix | - |
+| 8-12-2024| LangChain  | - | - |
+| 14-12-2024| LangChain  | - | - |
+| 15-12-2024| LangChain Memory Usage and Agent Creation | -| - |
+| 21-12-2024| Retrieval Augmented Generation (RAG)  | - | - |
 |22-12-204| Project |-----|-----|
 |28-12-204| Project Discussion |-----|-----|
 |29-12-204| Project Discussion|-----|-----|

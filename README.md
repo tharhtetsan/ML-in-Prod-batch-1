@@ -57,14 +57,39 @@
 |13-10-2024| CI/CD best practice |-----|-----|
 |19-10-2024| Continous Training for ML Systems-1 |-----|-----|
 |20-10-2024| Continous Training for ML Systems-2|-----|-----|
-|26-10-2024| Meachine Learning System best practice-1 | Putting all the things that we learned to get better ML System. | -|
-|27-10-2024| Meachine Learning System best practice-2 | Putting all the things that we learned to get better ML System. | -|
+
+
+|26-10-2024| Kubernetes Basic-1| - | -|
+|27-10-2024| Kubernetes Basic-2| - | -|
+
 
 
 
 
 #### November 2024
-###### Comming Soon
+##### Category : <b> MLOps Tools, Cloud Basic, Advance AI </b>
+|Date | Title | Description | Reference |
+|-----|-----|-----|-----|
+| 2-11-2024| Terraform with GCP | - | - |
+| 3-11-2024| Terraform with AWS | - | - |
+| 9-11-2024| Unit Testing and Integration Testing | - | - |
+| 10-11-2024| Code quality checking | - | - |
+| 16-11-2024| Meachine Learning System best practice-1 | Putting all the things that we learned to get better ML System. | - |
+| 17-11-2024| Meachine Learning System best practice-2 | Putting all the things that we learned to get better ML System. | - |
+| 23-11-2024| Knowledge Distillation | - | - |
+| 24-11-2024| Teacher and Student Network | - | - |
+| 30-11-2024| Generative AI (Image - 1) | Gen | - |
 
-#### December 2024
-###### Comming Soon
+#### November 2024
+##### Category : <b> MLOps Tools, Cloud Basic, Advance AI </b>
+|Date | Title | Description | Reference |
+|-----|-----|-----|-----|
+| 1-12-2024| Generative AI (Image - 2)  | UNet, Pix2Pix | - |
+| 7-12-2024| Generative AI (Image - 2) | UNet, Pix2Pix | - |
+| 8-12-2024| LangChain  | UNet, Pix2Pix | - |
+| 14-12-2024| LangChain  | UNet, Pix2Pix | - |
+| 15-12-2024| LangChain Memory Usage and Agent Creation | UNet, Pix2Pix | - |
+| 21-12-2024| Retrieval Augmented Generation (RAG)  | UNet, Pix2Pix | - |
+|22-12-204| Project |-----|-----|
+|28-12-204| Project Discussion |-----|-----|
+|29-12-204| Project Discussion|-----|-----|

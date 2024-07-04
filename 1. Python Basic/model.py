@@ -32,7 +32,9 @@ class SaleItem:
     
 
     def getCategoryAndProfit(self):
-        return self.item.category.name,self.item.getProfit()    
+    
+        
+        return self.item.category.name,self.item.name,self.item.getProfit()    
         
 
         

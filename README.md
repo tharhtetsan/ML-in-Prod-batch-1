@@ -62,8 +62,6 @@
 
 
 
-
-
 #### November 2024
 ##### Category : <b> MLOps Tools, Cloud Basic, Advance AI </b>
 |Date | Title | Description | Reference |
@@ -78,7 +76,7 @@
 | 24-11-2024| Teacher and Student Network | - | - |
 | 30-11-2024| Generative AI (Image - 1) | Gen | - |
 
-#### November 2024
+#### December 2024
 ##### Category : <b> MLOps Tools, Cloud Basic, Advance AI </b>
 |Date | Title | Description | Reference |
 |-----|-----|-----|-----|

@@ -57,8 +57,6 @@
 |13-10-2024| CI/CD best practice |-----|-----|
 |19-10-2024| Continous Training for ML Systems-1 |-----|-----|
 |20-10-2024| Continous Training for ML Systems-2|-----|-----|
-
-
 |26-10-2024| Kubernetes Basic-1| - | -|
 |27-10-2024| Kubernetes Basic-2| - | -|
 

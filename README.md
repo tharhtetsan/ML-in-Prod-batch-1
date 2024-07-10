@@ -86,6 +86,6 @@
 | 14-12-2024| LangChain  | - | - |
 | 15-12-2024| LangChain Memory Usage and Agent Creation | -| - |
 | 21-12-2024| Retrieval Augmented Generation (RAG)  | - | - |
-|22-12-204| Project |-----|-----|
-|28-12-204| Project Discussion |-----|-----|
-|29-12-204| Project Discussion|-----|-----|
+|22-12-2024| Project |-----|-----|
+|28-12-2024| Project Discussion |-----|-----|
+|29-12-2024| Project Discussion|-----|-----|

@@ -160,3 +160,5 @@ cython_debug/
 #.idea/
 /3_image_processing_techniques/OCR_proj/credentials
 /4_machine_learning/fruits
+
+**/**/.DS_Store

@@ -57,4 +57,4 @@ async def update_item(
 
 
 if __name__ == "__main__":
-    uvicorn.run("test_pydantic:app", port=8000, reload=True)
+    uvicorn.run("test_pydantic_2:app", port=8000, reload=True)

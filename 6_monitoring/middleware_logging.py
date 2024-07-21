@@ -49,7 +49,7 @@ async def check_gpu():
 
     mps_device = torch.device(device_name)
     x = torch.ones(1, device=mps_device)
-    print("GPU Type : ", mps_device)
+    print("GPU Type: ", mps_device)
     return {"device": device_name}
 
 

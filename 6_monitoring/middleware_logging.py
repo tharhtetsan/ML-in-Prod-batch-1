@@ -52,5 +52,6 @@ async def check_gpu():
     print("GPU Type : ", mps_device)
     return {"device": device_name}
 
+
 if __name__ == "__main__":
     uvicorn.run("middleware_logging:app", port=8000, reload=True)

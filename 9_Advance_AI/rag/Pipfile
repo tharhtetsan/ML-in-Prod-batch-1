@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+loguru = "*"
+qdrant-client = "*"
+
+[dev-packages]
+pypdf = "*"
+aiofiles = "*"
+python-multipart = "*"
+transformers = "*"
+qdrant-client = "*"
+ipykernel = "*"
+fastembed = "*"
+fastapi = "*"
+streamlit = "*"
+
+[requires]
+python_version = "3.10"

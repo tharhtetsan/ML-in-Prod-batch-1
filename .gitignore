@@ -162,3 +162,5 @@ cython_debug/
 /4_machine_learning/fruits
 
 **/**/.DS_Store
+
+**/.env

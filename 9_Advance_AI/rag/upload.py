@@ -9,4 +9,4 @@ async def save_file(file : UploadFile):
     async with aiofiles.open(filepath,"wb") as f:
         while chunk := await file.read(DEFAULT_CHUNK_SIZE):
             await f.write(chunk)
-
+    return filepath

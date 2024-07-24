@@ -1,16 +1,16 @@
 import re
 from typing import Any, AsyncGenerator
 
-import aiofiless
-from transormers import AutoModel
+import aiofiles
+from transformers import AutoModel
 
 embedder = AutoModel.from_pretrained(
-    "jinaai/jina-embeddings-v2-base-en", trust_remote_code=True 1
+    "jinaai/jina-embeddings-v2-base-en", trust_remote_code=True 
 )
 
 
 async def load(filepath : str , chunk_size  : int = 20000) -> AsyncGenerator[str,Any]:
-    async with aiofiless.open(filepath,"r") as f:
+    async with aiofiles.open(filepath,"r") as f:
         while True:
             chunk = await f.read(chunk_size)
             if not chunk:

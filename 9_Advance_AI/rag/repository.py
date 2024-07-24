@@ -81,6 +81,8 @@ class VectorRepository:
                      query_vector : list[float],
                      retrievel_limit : int,
                      score_threshold : float) -> list[ScoredPoint]:
+        
+        
         logger.debug(
             f"Searching for relevant items in the {collection_name} - collection"
             )
@@ -92,5 +94,4 @@ class VectorRepository:
         )
 
         return vectors
-    
     

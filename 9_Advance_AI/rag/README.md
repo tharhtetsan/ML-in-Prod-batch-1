@@ -19,3 +19,8 @@ You can use other vector database providers such as Weaviate, Elastic, Milvus, P
 docker pull qdrant/qdrant 
 docker run -p 6333:6333 -v $(pwd)/qdrant_storage:/qdrant/storage:z qdrant/qdrant
 ```
+
+```bash
+pipenv install --dev
+
+```

@@ -1,13 +1,5 @@
 # Machine Learning Systems for Production
 
-### Course References
-- [MIT introtodeeplearning](http://introtodeeplearning.com/)
-
-#### Reference Books
-|[Designing Machine Learning Systems](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)|[Deciphering Data Architectures](https://www.amazon.com/Deciphering-Data-Architectures-Warehouse-Lakehouse/dp/1098150767)|[Building an Event-Driven Data Mesh](https://www.amazon.com/Building-Event-Driven-Data-Mesh-Architectures/dp/1098127609)|[Building Generative AI Services with FastAPI](https://learning.oreilly.com/library/view/building-generative-ai/9781098160296/)|
-|-----|-----|-----|-----|
-|<img src="./images/book_2.png" width="300" height="300" />|<img src="./images/book_3.png" width="300" height="300" />|<img src="./images/book_1.png" width="300" height="300" />|<img src="./images/book_4.png" width="300" height="300" />|
-
 
 
 
@@ -103,4 +95,12 @@
 
 
 
+
+### Course References
+- [MIT introtodeeplearning](http://introtodeeplearning.com/)
+
+#### Reference Books
+|[Designing Machine Learning Systems](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)|[Deciphering Data Architectures](https://www.amazon.com/Deciphering-Data-Architectures-Warehouse-Lakehouse/dp/1098150767)|[Building an Event-Driven Data Mesh](https://www.amazon.com/Building-Event-Driven-Data-Mesh-Architectures/dp/1098127609)|[Building Generative AI Services with FastAPI](https://learning.oreilly.com/library/view/building-generative-ai/9781098160296/)|
+|-----|-----|-----|-----|
+|<img src="./images/book_2.png" width="300" height="300" />|<img src="./images/book_3.png" width="300" height="300" />|<img src="./images/book_1.png" width="300" height="300" />|<img src="./images/book_4.png" width="300" height="300" />|
 

@@ -27,9 +27,11 @@ We can see the different between Regression and Classification with Email SPAM c
 
 ဉပမာ။ User ကနောက်ထပ်ဘယ် App ကိုဖွင့်မလဲဆိုတာတွက်ချက်ပီး RAM ပေါ် ကြိုတင်ပေးရမယ်ဆိုပါတော့။
 ကျွန်တော်တို့တွေ ဒီလိုတွေးနိုင်ပါတယ်။ 
+
 <img src="./images/apporach_1.png" width="600" height="250" />
 
-ဒီ Case မှာက နောက်ထပ် App တွေကလည်း user က ထပ်ထည့်နိုင်တာကြောင့်၊ သေချာပေါက် ကျွန်တော်တို့ model output nodes တွေကို အရှင်ထားရမလိုဖြစ်လာတတ်ပါတယ်။ ဒါပေမဲ့ ကျွန်တော်တီု့တွေပြသနာကို ဒီလိုပြောင်းပီးတွေးလို့ရပါသေးတယ်။
+ဒီ Case မှာက နောက်ထပ် App တွေကိုလည်း user က ထပ်ထည့်နိုင်တာကြောင့်၊ သေချာပေါက် ကျွန်တော်တို့ model output nodes တွေကို အရှင်ထားရမလိုဖြစ်လာတတ်ပါတယ်။ ဒါပေမဲ့ ကျွန်တော်တီု့တွေပြသနာကို ဒီလိုပြောင်းပီးတွေးလို့ရပါသေးတယ်။
+
 <img src="./images/apporach_2.png" width="600" height="250" />
 
 
@@ -61,3 +63,48 @@ Schema clearly defined|	Data doesn’t have to follow a schema|
 
 ### Labeling
 Disagreements among annotators are extremely common.To minimize the disagreement among annotators, it’s important to first have a clear problem definition. For example, in the preceding entity recognition task, some disagreements could have been eliminated if we clarify that in case of multiple possible entities, pick the entity that comprises the longest substring. You need to incorporate that definition into the annotators’ training to make sure that all annotators understand the rules
+
+
+## 3. Feature Engineering
+### Common Feature Engineering Operations
+
+#### Handling Missing Values
+Remark : there is no perfect way to handle missing values.
+
+- Delection (I know, we all love this way) 
+- Imputation (fill missing data with certain values.)
+
+<img src="./images/missing_data.png" width="400" height="400" />
+
+
+#### Encoding Categorical Features
+ကျွန်တော်တို့တွေ့ Neural Network တွေမှာ Categorial Feature  တွေအကြောင်းသိခဲ့ပီးဖြစ်ပါတယ်။ Dynamic ML System တွေနဲ့ အတွေ့ကြုံမရှိသေးတဲ့ လူတွေကတော့ Categorial classifcation ကို Static  လို့ထင်မိတတ်ကြပါတယ်။ Output label တွေက မ Change တော့ဘူးပေါ့။ တကယ်လက်တွေ့မှာတော့ Change နိုင်ပါတယ်။
+
+##### Problem Statement
+ဉပမာအနေတဲ့ သင်က e-commerce Website တစ်ခုအတွက် Product recommendation အတွက် ML System တစ်ခုဆောက်ပေးရမယ်ဆိုပါတော့၊ 
+Input လုပ်ရမယ့် Feature တွေထဲမှာ Product Category ပါတယ်ဆိုပါတော့။ ဒါဆိုရင် သင်က Encoding လုပ်ဖို့အတွက် Category ဘယ်နှစ်ခုရှိလဲဆိုတာသိရတော့မယ်။
+```json
+{
+    "unknown" : 0,
+    "food" : 1,
+    "clothes" : 2,
+    "toys" : 3,
+    ...
+}
+```
+dataset ထဲက unique ဖြစ်တဲ့ Product Category တွေလိုက်ကြည့်လိုက်တဲ့အခါမှာ 3000 တွေ့တယ်ဆိုပါတော့။ ဒါဆိုရင် သင် 0 to 3000 အထိ Encoding လုပ်မိနိုင်ပါတယ်။ 
+ဒါပေမဲ့ e-commerce  ဆိုတဲ့အတိုင်း Product Category တွေက တိုးလာနိုင်ပါတယ်။ Category တစ်ခုပဲတိုးလာလို့ Unknown အနေနဲ့ DL Model ထဲကိုဝင်ပီး recommendation လုပ်ပေးနိုင်တာ ပြသနာမဟုတ်ပေမဲ့၊
+တစ်ခုထပ်ပိုပီး တိုးလာတဲ့အခါကြရင် လက်ရှိကောင်းနေတဲ့ Recommendation System ရဲ့ Accuracy ကိုထိခိုက်နိုင်ပါတယ်။ 
+eg:  "boxing" နဲ့ "fastfood" ကိုတူတူ Unknown အနေနဲ့ဝင်ပီး Recommendation ပြတဲ့အခါမျိုးတွေပေ့ါ။
+
+
+
+##### Solution
+- Hashing trick using [VowpalWabbit](https://github.com/VowpalWabbit/vowpal_wabbit)
+- Code (comming soon)
+
+
+#### Feature Crossing
+Feature Crossing ဆိုတာ Feature တွေကို နှစ်ခု -> တစ်ခု ပေါင်းလိုက်တာပဲဖြစ်ပါတယ်။ တစ်ခုရှိတာ ဒီနည်းက နဂိုကတည်းကမှာ ရှုပ်နေတဲ့ Feature တွေဆိုရင် Noise ပိုဖြစ်သွားစေနိုင်ပါတယ်။
+
+<img src="./images/feature_crossing.png" width="600" height="200" />

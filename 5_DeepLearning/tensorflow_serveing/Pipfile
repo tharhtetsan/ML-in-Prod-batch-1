@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tensorflow = "*"
+tensorflow-macos = "*"
+tensorflow-metal = "*"
+pydot = "==2.0.0"
+pydot-ng = "*"
+matplotlib = "*"
+pillow = "*"
+opencv-python = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10.14"

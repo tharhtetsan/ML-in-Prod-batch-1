@@ -170,3 +170,4 @@ cython_debug/
 5_DeepLearning/tf_best_practices/skin_cancer/**/**/
 /5_DeepLearning/tensorflow_serveing/logs
 *.v2
+5_DeepLearning/CNN/cats_and_dogs_filtered/**/**/**/

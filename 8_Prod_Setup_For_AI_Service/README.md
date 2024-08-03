@@ -66,6 +66,14 @@ Disagreements among annotators are extremely common.To minimize the disagreement
 
 
 ## 3. Feature Engineering
+Generally, adding more features leads to better model performance. But having too many features can be bad both during training and serving your model for the following reasons:
+- The more features you have, the more opportunities there are for data leakage.
+- Too many features can cause overfitting.
+- Too many features can increase memory required to serve a model.
+- Too many features can increase inference latency.
+- Useless features become technical debts.
+
+
 ### Common Feature Engineering Operations
 
 #### Handling Missing Values
@@ -108,3 +116,5 @@ eg:  "boxing" နဲ့ "fastfood" ကိုတူတူ Unknown အနေနဲ
 Feature Crossing ဆိုတာ Feature တွေကို နှစ်ခု -> တစ်ခု ပေါင်းလိုက်တာပဲဖြစ်ပါတယ်။ တစ်ခုရှိတာ ဒီနည်းက နဂိုကတည်းကမှာ ရှုပ်နေတဲ့ Feature တွေဆိုရင် Noise ပိုဖြစ်သွားစေနိုင်ပါတယ်။
 
 <img src="./images/feature_crossing.png" width="600" height="200" />
+
+

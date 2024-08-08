@@ -172,3 +172,4 @@ cython_debug/
 *.v2
 5_DeepLearning/CNN/cats_and_dogs_filtered/**/**/**/
 *.h5
+/14_Advance_AI/rag/qdrant_storage/collections

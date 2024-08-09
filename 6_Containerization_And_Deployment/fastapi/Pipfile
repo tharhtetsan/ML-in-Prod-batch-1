@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tensorflow = "2.17.0"
+pillow = "*"
+opencv-python = "*"
+fastapi = "*"
+uvicorn = "*"
+python-multipart = "*"
+
+[dev-packages]
+tensorflow-macos = "*"
+tensorflow-metal = "*"
+ipykernel = "*"
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.14"

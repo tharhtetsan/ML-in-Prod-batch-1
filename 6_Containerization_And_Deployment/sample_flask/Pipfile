@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+gunicorn = "*"
+tensorflow = "2.17.0"
+
+
+[dev-packages]
+tensorflow-macos = "*"
+tensorflow-metal = "*"
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.14"

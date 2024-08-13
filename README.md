@@ -1,29 +1,37 @@
 # Machine Learning Systems for Production
 
+This repository contains materials for the "Machine Learning Systems for Production" course by [Thar Htet San](https://github.com/tharhtetsan). The lecture videos are available on the [Deepfaro YouTube channel](https://www.youtube.com/@deepfaro). This course focuses on MLOps, covering the following key topics:
 
+- Addressing technical debts in MLOps.
+- Framing problems as ML solutions.
+- Approaching ML systems using current project management techniques.
+- Setting up a development environment for ML projects.
+- Creating an ML lifecycle management system.
+- Handling data drift, model drift, and monitoring in ML systems.
+- Systematically managing the ongoing development of ML systems.
 
 
 ### Course Timetable
 #### Junly 2024
 ##### Category : <b> Programming, Logic, ML Basic </b>
-|Date | Title | Description | Reference |
+|Date | Title | Description | Video + Source Code  |
 |-----|-----|-----|-----|
-|13-7-2024 | Python Basic | Programming Discussion, OOP and some basic design Pattern | -|
-|14-7-2024|Enviroment Setup| Solving dependencies conflicts for Development and Prod | -|
-|20-7-2024 | Image Processing Techniques | How we can use this part for large ML problems solving | -|
-|21-7-2024 |Basic Machine Learning Algorithms - 1  | ( Linear Regression, Decision Tree ) | -|
-|27-7-2024 |Basic Machine Learning Algorithms- 2 | (K-Means, Navie Bayes)  | -|
-|28-7-2024 | Basic Deep Learning-1 | (ANN with tensorflow, Pytorch,from scratch ) | -|
+|13-7-2024 | Python Basic | - Programming Discussion, OOP and some basic design Pattern | [Day-1](https://youtu.be/_IXDpQksQ-M)|
+|14-7-2024|Enviroment Setup| - Setting up for prod and dev. </br> - Solving dependencies conflicts for Development and Prod | [Day-2](https://youtu.be/49iP3qvKgg8)|
+|20-7-2024 | Image Processing Techniques | - Basic Image Processing Techniques. </br> - BGR and RGB. </br> - Image lib : OpenCV and Pillow. </br> - Line detection Sample Project | [Day-3](https://youtu.be/e5-31ef4Ofk) |
+|21-7-2024 | OCR Project   | - Applying image processing techniques. </br> - Template Matching </br> - Google Vision API.  | [Day-4](https://youtu.be/dup78khJDxs)|
+|27-7-2024 |Basic ML Algorithms - 1 | - Decision Tree </br> - K-Means Clustering  | [Day-5](https://youtu.be/ilEPlk8ocnU) |
+|28-7-2024 | Basic ML Algorithms - 2 </br>Basic DL Algorithms - 1 | - Linear Regression using Least Squares </br> - Naive-Bayes-Classifier </br>- ANN and Single perceptron (from scratch ) | [Day-6](https://youtu.be/2vj996L2rsY)|
 
 
 #### August 2024
 ##### Category : <b> Logic, ML Basic, Tensorflow, Pytroch, Cloud Basic </b>
-|Date | Title | Description | Reference |
+|Date | Title | Description | Video+Source |
 |-----|-----|-----|-----|
-|3-8-2024| ML Basic, Logic | Basic Deep Learning-2  | (CNN, RNN with tensorflow, Pytorch) | -|
-|4-8-2024|  Basic Deep Learning-3  | (LSTM with tensorflow) | -|
-|10-8-2024|   Basic Deep Learning-4  | (NLP Basic) | -|
-|11-8-2024| Setting up the ML project  | (Flask, FastAPI, Docker ) | -|
+|3-8-2024| Basic DL Algorithms - 2 | - CNN Details. </br> - How calculate trainable parameters. </br> - Why CNN is better than ANN in Computer vision problem.   | [Day-7](https://youtu.be/6qaSiebD5ZQ)|
+|4-8-2024|  Basic Deep Learning-3  | - Env Setup for ML project </br> - Tensorflow Basic </br> - Tensorflow Data Generators. </br> - Learning Rate Scheduler <br> - Tensorboard </br> - Model Saving and Loading| [Day-8](https://youtu.be/lMk1IdZvf58)|
+|10-8-2024|   Basic Deep Learning-4  | - Creating Custom Data Generators </br>- Beyond the Sequential Deeplearing models </br>- Saving and Loading custom DL models | [Day-9 <br>(Full version)](https://youtu.be/qR9U2vQRjzQ) |
+|11-8-2024| Setup Production ready ML system. | - Understanding Flask </br> - Env Setup for Dev and Prod </br> - Contrainerization ML project </br> - Getting Start with FastAPI. |  [Day-10 <br>(Full version)](https://youtu.be/Qe3iXw-KDz0)|
 |17-8-2024| Tensorflow Severing | ensorflow Severing Artchitecture and How we can easily use | -|
 |18-8-2024| Getting Start with pySpark | Comparison between Pands and pySpark  | -|
 |24-8-2024| Containerzation for ML Projects  | ( GPU libs ready containers vs predefined ML Images, Custom Install) | -|

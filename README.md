@@ -112,3 +112,6 @@ This repository contains materials for the "Machine Learning Systems for Product
 |-----|-----|-----|-----|
 |<img src="./images/book_2.png" width="300" height="300" />|<img src="./images/book_3.png" width="300" height="300" />|<img src="./images/book_1.png" width="300" height="300" />|<img src="./images/book_4.png" width="300" height="300" />|
 
+
+### Connect Me
+If you're interested in my course, feel free to connect with me

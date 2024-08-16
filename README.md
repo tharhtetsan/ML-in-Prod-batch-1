@@ -12,7 +12,7 @@ This repository contains materials for the "Machine Learning Systems for Product
 
 
 ### Course Timetable
-#### Junly 2024
+#### July 2024
 ##### Category : <b> Programming, Logic, ML Basic </b>
 |Date | Title | Description | Video + Source Code  |
 |-----|-----|-----|-----|

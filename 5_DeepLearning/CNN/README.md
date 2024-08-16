@@ -24,3 +24,5 @@ https://github.com/tharhtetsan/zero_2_hero_ml/tree/main/7_Deep_Learning/CNN
 ​- N_in: Number of input neurons.
 - 𝑁_out : Number of output neurons.
 - 1: This accounts for the bias term for each output neuron.
+
+

@@ -6,10 +6,40 @@ import os
 from PIL import Image
 import uvicorn
 import numpy as np
+from contextlib import asynccontextmanager
+from model_work import CustomModelWork
 
 
 
-app = FastAPI()
+ml_models = {}
+
+@asynccontextmanager
+async def lifesapn(app : FastAPI):
+    """
+    device_name = None
+    if torch.backends.mps.is_available():
+        device_name = "cpu"
+    else:
+        device_name = "cpu"
+
+    ml_models["text"] = m_text.load_text_model(device_name= device_name)
+    """
+    
+    custom_model = CustomModelWork()
+    custom_model.load_Model()
+
+    
+
+    ml_models["custom_skincancer_model"] = custom_model
+    yield
+    ml_models.clear()
+
+    
+    
+    
+
+
+app = FastAPI(lifespan= lifesapn)
 
 @app.get("/")
 def home():
@@ -21,7 +51,7 @@ def check_gpu():
     gpu_status = tf.test.is_gpu_available()
     return {"gpu_status" : gpu_status}
 
-@app.post("/predict_image" )
+@app.post("/predict_skincancer" )
 async def server_image_to_video_model_controller(file: UploadFile):
     input_size= (128,128)
 
@@ -30,8 +60,12 @@ async def server_image_to_video_model_controller(file: UploadFile):
 
     np_image = np.asanyarray(image)
 
-    
-    return {"image : ",np_image.shape}
+    custom_model = (ml_models["custom_skincancer_model"])
+    input_image = custom_model.preprocess_img(np_image)
+    pred_label,conf = custom_model.pred_img(input_img=input_image)
+    pred_response = {"predicted_result": pred_label,"confidence":conf}
+
+    return pred_response
 
 
 

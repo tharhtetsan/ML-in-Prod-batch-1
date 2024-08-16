@@ -14,6 +14,7 @@
 ### Deep Learning (DL)
 - DL is subset of ML and it just teaching computers how to learn a task directly from row data.
 
-
 <img src="DL.png" width="500" height="300" >
+
+</br>
 

@@ -7,7 +7,7 @@ from PIL import Image
 import uvicorn
 import numpy as np
 from contextlib import asynccontextmanager
-from model_work import CustomModelWork
+from model_work import CustomModel_work,catAndDogModel_work
 
 
 
@@ -25,18 +25,20 @@ async def lifesapn(app : FastAPI):
     ml_models["text"] = m_text.load_text_model(device_name= device_name)
     """
     
-    custom_model = CustomModelWork()
-    custom_model.load_Model()
-
+    custom_model = CustomModel_work()
+    custom_model.load_model()
     
+    catAnddog_model = catAndDogModel_work()
+    catAnddog_model.load_model()
 
     ml_models["custom_skincancer_model"] = custom_model
+
+    ml_models["cat_and_dog_model"] = catAnddog_model
+
+
     yield
     ml_models.clear()
 
-    
-    
-    
 
 
 app = FastAPI(lifespan= lifesapn)
@@ -53,8 +55,6 @@ def check_gpu():
 
 @app.post("/predict_skincancer" )
 async def server_image_to_video_model_controller(file: UploadFile):
-    input_size= (128,128)
-
     request_object_content = await file.read()
     image = Image.open(io.BytesIO(request_object_content))
 
@@ -67,6 +67,19 @@ async def server_image_to_video_model_controller(file: UploadFile):
 
     return pred_response
 
+
+@app.post("/predict_catAnddog" )
+async def server_image_to_video_model_controller(file: UploadFile):
+    request_object_content = await file.read()
+    image = Image.open(io.BytesIO(request_object_content))
+
+    np_image = np.asanyarray(image)
+    catdog_model = (ml_models["cat_and_dog_model"])
+    input_image = catdog_model.preprocess_img(np_image)
+    pred_label = catdog_model.pred_img(input_image)
+    pred_response = {"predicted_result": pred_label}
+
+    return pred_response
 
 
 if __name__ == "__main__":

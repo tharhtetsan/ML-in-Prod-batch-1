@@ -22,3 +22,33 @@ astro dev stop.
 
 ### Shortcut
 shift + \
+
+
+
+## Scheduler
+### Scheduler expression
+```bash
+None          Don’t schedule, use for exclusively “externally triggered” DAGs
+@once          Schedule once and only once
+@hourly          Run once an hour at the end of the hour
+@daily          Run once a day at midnight (24:00)
+@weekly          Run once a week at midnight (24:00) on Sunday
+@monthly          Run once a month at midnight (24:00) of the first day of the month
+@quarterly        Run once a quarter at midnight (24:00) on the first day
+@yearly          Run once a year at midnight (24:00) of January 1
+```
+
+If you want to run your task every 3 days or every 3 week, please use CRON expressions
+```bash
+from datetime import timedelta
+
+schedule = timedelta(weeks=2),
+```
+
+
+#### The catchup and backfilling
+The catchup mechanism in Airflow allows running all non-triggered DAGRuns between the start date and the last time the DAG was triggered. The backfilling mechanism allows running historical DAGRuns or rerun already existing DAGRuns.
+![catchup_andbackfill](./images/catchup_andbackfill.png)
+```bash
+airflow dags backfill --start-date START_DATE --end-date END_DATE dag_id
+```

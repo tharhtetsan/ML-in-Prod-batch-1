@@ -114,4 +114,4 @@ This repository contains materials for the "Machine Learning Systems for Product
 
 
 ### Connect Me
-If you're interested in my course, feel free to connect with me
+If you're interested in my course, feel free to connect with me.

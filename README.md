@@ -16,7 +16,7 @@ This repository contains materials for the "Machine Learning Systems for Product
 ##### Category : <b> Programming, Logic, ML Basic </b>
 |Date | Title | Description | Video + Source Code  |
 |-----|-----|-----|-----|
-|13-7-2024 | Python Basic | - Programming Discussion, OOP and some basic design Pattern | [Day-1](https://youtu.be/_IXDpQksQ-M)|
+|13-7-2024 | Python Basic | - Programming Discussion, OOP and some basic design pattern | [Day-1](https://youtu.be/_IXDpQksQ-M)|
 |14-7-2024|Enviroment Setup| - Setting up for prod and dev. </br> - Solving dependencies conflicts for Development and Prod | [Day-2](https://youtu.be/49iP3qvKgg8)|
 |20-7-2024 | Image Processing Techniques | - Basic Image Processing Techniques. </br> - BGR and RGB. </br> - Image lib : OpenCV and Pillow. </br> - Line detection Sample Project | [Day-3](https://youtu.be/e5-31ef4Ofk) |
 |21-7-2024 | OCR Project   | - Applying image processing techniques. </br> - Template Matching </br> - Google Vision API.  | [Day-4](https://youtu.be/dup78khJDxs)|
@@ -114,4 +114,4 @@ This repository contains materials for the "Machine Learning Systems for Product
 
 
 ### Connect Me
-If you're interested in my course, feel free to connect with me
+If you're interested in my course, feel free to connect with me.

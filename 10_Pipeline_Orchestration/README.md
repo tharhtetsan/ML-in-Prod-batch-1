@@ -53,5 +53,10 @@ The catchup mechanism in Airflow allows running all non-triggered DAGRuns betwee
 airflow dags backfill --start-date START_DATE --end-date END_DATE dag_id
 ```
 
+#### XCOM
+SQLite -> 2Gb per XCOM
+Postgres -> 1Gb per XCOM
+MySQL -> 64MB per XCOM
+
 
 https://registry.astronomer.io/

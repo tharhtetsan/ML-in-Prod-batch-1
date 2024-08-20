@@ -68,6 +68,9 @@ sudo dvc push
 
 ### Pull the data back
 ```bash
+git checkout 6d65b91 #v2
+git checkout fc703da #v1
+dvc checkout
 sudo dvc pull -f
 ```
 

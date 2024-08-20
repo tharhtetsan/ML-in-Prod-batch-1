@@ -59,4 +59,80 @@ Postgres -> 1Gb per XCOM
 MySQL -> 64MB per XCOM
 
 
+### Airflow variable
+Your can also write in .env file, it imported in system and cannot see in Airflow UI.
+
+
+Variable keywords automatically hiding values
+```bash
+access_token
+api_key
+apikey
+authorization
+passphrase
+passwd
+password
+private_key
+secret
+token
+keyfile_dict
+service_account
+```
+
+```bash
+#check your dags exist in metadatabase or not
+astro dev run dags list  
+
+#check your logs
+astro dev logs scheduler
+```
+
+
+
+
+### Sensors
+A Sensor is a particular operator that waits for a condition to be true. If the condition is true, the task is marked successful , and the next task runs. If the condition is false, the sensor waits for another interval until it times out and fails.
+
+
+
+## Airflow with GCP Storage Object file
+```bash
+pip install 'apache-airflow[google]'
+```
+
+### 1. GCP Credentials Setup
+
+To connect Airflow with Google Cloud Storage (GCS), you need to configure a Google Cloud service account and set up the Airflow connection.
+
+#### Setting Up Google Cloud Service Account
+
+1. **Create a Service Account** in your Google Cloud project.
+2. **Download the JSON key file** for the service account.
+3. **Store the key file** securely on your Airflow server.
+
+#### Environment Variable for Credentials
+
+Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable in your Airflow environment:
+
+```python
+import os
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/path/to/your/service-account-file.json"
+```
+
+
+| Connection Id   | google_cloud_default                            |
+|-----------------|-------------------------------------------------|
+| Connection Type | Google Cloud                                    |
+| Project ID      | your-gcp-project-id                             |
+| Keyfile Path    | /path/to/your/service-account-file.json         |
+| Scope           | https://www.googleapis.com/auth/cloud-platform  |
+
+
+**GCSObjectsWithPrefixExistenceSensor:** Check for the existence of files in a GCS folder.
+**GCSObjectUpdateSensor:** Monitor a specific file for updates.
+**Custom Sensor:** Monitor a "folder" for changes by tracking modifications to the files within it.
+
+
+
+
 https://registry.astronomer.io/

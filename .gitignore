@@ -179,3 +179,5 @@ cython_debug/
 
 5_DeepLearning/tf_best_practices/cat_and_dogs_train/*
 5_DeepLearning/tf_best_practices/cats_and_dogs_filtered/*
+10_Pipeline_Orchestration/service_account.json
+10_Pipeline_Orchestration/local_airflow/dags/service_account/service_account.json

@@ -20,8 +20,23 @@ Now dvc is creating a  cache file, please check <b> .dvc/cache/files/md5/.. </b>
 
 
 
-To track changes in Git:
+To track the changes with git:
 ```bash
 git add single_file/sample_vehicle_history.csv.dvc single_file/.gitignore
 git commit -m "Add raw data"
+git push
 ```
+
+
+
+Configuring a remote
+
+
+
+
+Making Local changes
+```bash
+dvc add single_file/sample_vehicle_history.csv
+dvc push
+```
+

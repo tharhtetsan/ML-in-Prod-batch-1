@@ -1,0 +1,6 @@
+outs:
+- md5: 0f3e261c7de46334b438822786d8f524.dir
+  size: 19739
+  nfiles: 1
+  hash: md5
+  path: gcp_bucket

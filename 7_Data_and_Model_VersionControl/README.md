@@ -1,5 +1,31 @@
 
 
+### 1. Install Google cloud CLI
+1. [Google cloud CLI](https://cloud.google.com/sdk/docs/install)
+2. Login to you GCP account
+```bash
+gcloud auth login
+gcloud auth application-default login
+```
+3. Create IAM for Cloud Storage Admin.
+```bash
+IAM & Admin -> Grant Access -> Add email -> Role :  Storage Admin
+```
+4. Create GCP Project and set this Project ID to gcloud
+```bash
+gcloud config set project PROJECT_ID
+```
+
+
+
+### 2. DVC
+#### 1. Install [DVC](https://dvc.org/)
+###  2. Install [DVC-gs] (for GCP Only)
+```bash
+pip install dvc-gs
+```
+
+#### 3. Init DVC
 ```bash
 dvc init
 git status
@@ -11,32 +37,36 @@ git commit -m "Initialize DVC"
 git push
 ```
 
-Use dvc add to start tracking the dataset file:
+#### Use dvc add to start tracking the dataset file:
 ```bash
-dvc add single_file/sample_vehicle_history.csv
+dvc add gcp_bucket
 ```
 
 Now dvc is creating a  cache file, please check <b> .dvc/cache/files/md5/.. </b>
 
-
-
-To track the changes with git:
+#### 
 ```bash
-git add single_file/sample_vehicle_history.csv.dvc single_file/.gitignore
-git commit -m "Add raw data"
-git push
+git add gcp_bucket.dvc
+```
+
+#### Configuring a remote with google drive
+```bash
+dvc remote add --default gcp_bucket gs://ths_ml_in_prod_batch_1/single_file/gcp_bucket -f
+
+dvc commit
+sudo dvc push
+```
+
+
+#### Making Local changes
+```bash
+dvc add gcp_bucket
+sudo dvc push
 ```
 
 
 
-Configuring a remote
-
-
-
-
-Making Local changes
+### Pull the data back
 ```bash
-dvc add single_file/sample_vehicle_history.csv
-dvc push
+sudo dvc pull -f
 ```
-

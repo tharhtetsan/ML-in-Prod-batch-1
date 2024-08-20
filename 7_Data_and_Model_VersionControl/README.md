@@ -70,3 +70,9 @@ sudo dvc push
 ```bash
 sudo dvc pull -f
 ```
+
+
+#### now create new branch and make PR
+```bash
+ git switch -c new_branch
+```

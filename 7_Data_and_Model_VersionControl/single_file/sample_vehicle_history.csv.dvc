@@ -1,0 +1,5 @@
+outs:
+- md5: 37c87171fc2a276aacbab57c4c83ed78
+  size: 19716
+  hash: md5
+  path: sample_vehicle_history.csv

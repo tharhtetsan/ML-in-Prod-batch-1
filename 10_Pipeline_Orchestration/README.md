@@ -128,11 +128,46 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/path/to/your/service-account-fi
 | Scope           | https://www.googleapis.com/auth/cloud-platform  |
 
 
-**GCSObjectsWithPrefixExistenceSensor:** Check for the existence of files in a GCS folder.
-**GCSObjectUpdateSensor:** Monitor a specific file for updates.
-**Custom Sensor:** Monitor a "folder" for changes by tracking modifications to the files within it.
+### Search module in [Astronomer Registry](https://registry.astronomer.io/)
+
+
+- **GCSObjectsWithPrefixExistenceSensor:** Check for the existence of files in a GCS folder.
+- **GCSObjectUpdateSensor:** Monitor a specific file for updates.
+- **Custom Sensor:** Monitor a "folder" for changes by tracking modifications to the files within it.
 
 
 
+**For complex use Sensor Decorator** 
 
-https://registry.astronomer.io/
+
+### Docker and airflow commands
+```bash
+docker ps
+docker exec -it  CONTAINER_ID sh
+#check related libs are installed or not
+airflow info
+# initialize the airflow metadata databse.
+airflow db init 
+ # to check db connection
+ airflow db check
+# create airflow user
+airflow users create -e gg@gmail.com -f tt_firstname -l tt_lastname -u tt_username -p tt_username -r Viewer
+ airflow users create -e gg@gmail.com -f tt_firstname -l tt_lastname -u tt_username -p tt_username -r Admin
+
+
+#check configs 
+airflow config list
+
+airflow cheat-sheet
+
+
+# to check dags list
+airflow dags report
+
+airflow dags list-import-errors
+
+
+
+```
+
+

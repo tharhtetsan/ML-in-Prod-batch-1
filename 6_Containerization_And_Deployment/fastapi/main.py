@@ -1,87 +1,109 @@
-import tensorflow as tf
-from fastapi import FastAPI
-from fastapi import Query, Response, status, UploadFile
-import io
-import os
-from PIL import Image
+from fastapi import FastAPI, UploadFile
 import uvicorn
-import numpy as np
+import tensorflow as tf
 from contextlib import asynccontextmanager
-from model_work import CustomModel_work,catAndDogModel_work
+from model_work import CatAndDogModel_work, SkinCancerModel_work,m_text,m_autio
+from PIL import Image
+import io
+import numpy as np
+import torch
+
+from fastapi.responses import StreamingResponse
+from fastapi import Query,status,Response
 
 
 
 ml_models = {}
 
 @asynccontextmanager
-async def lifesapn(app : FastAPI):
-    """
-    device_name = None
-    if torch.backends.mps.is_available():
-        device_name = "cpu"
-    else:
-        device_name = "cpu"
+async def lifespan (app : FastAPI):
 
-    ml_models["text"] = m_text.load_text_model(device_name= device_name)
-    """
+    CatAndDogModel_obj = CatAndDogModel_work()
+    CatAndDogModel_obj.load_model()
+    ml_models["cat_and_dog_model"] = CatAndDogModel_obj
+
+
+    #skincancer_obj = SkinCancerModel_work()
+    #skincancer_obj.load_model()
+    #ml_models["skincancer_model"] = skincancer_obj
     
-    custom_model = CustomModel_work()
-    custom_model.load_model()
-    
-    catAnddog_model = catAndDogModel_work()
-    catAnddog_model.load_model()
 
-    ml_models["custom_skincancer_model"] = custom_model
-
-    ml_models["cat_and_dog_model"] = catAnddog_model
-
+    audio_obj = m_autio()
+    audio_obj.load_model()
+    ml_models["m_audio"] = audio_obj
 
     yield
     ml_models.clear()
+    
 
 
+app = FastAPI(lifespan=lifespan)
 
-app = FastAPI(lifespan= lifesapn)
+
 
 @app.get("/")
 def home():
-    return "Hello there!"
+    return "hello"
 
 
 @app.get("/check_gpu")
 def check_gpu():
-    gpu_status = tf.test.is_gpu_available()
-    return {"gpu_status" : gpu_status}
+    tf_gpu_status = tf.test.is_gpu_available()
+    troch_gpu_status  = torch.backends.mps.is_available()
+    _response =  {"tf_gpu_status" : tf_gpu_status,
+                  "torch_gpu_status" : troch_gpu_status}
 
-@app.post("/predict_skincancer" )
-async def server_image_to_video_model_controller(file: UploadFile):
-    request_object_content = await file.read()
-    image = Image.open(io.BytesIO(request_object_content))
+    return _response
+
+
+@app.post("/predict_catdog")
+async def serve_catAnddo(file : UploadFile):
+    object_content = await file.read()
+    image = Image.open(io.BytesIO(object_content))
+
+    np_image = np.asanyarray(image)
+
+    cat_and_dog_model_obj = ml_models["cat_and_dog_model"]
+
+    input_image =cat_and_dog_model_obj.preprocess_img(np_image)
+    pred_class = cat_and_dog_model_obj._predict(input_image)
+    response_ = {"predicted_label ": pred_class}
+    return response_
+
+
+
+@app.post("/predict_skincancer")
+async def serve_catAnddo(file : UploadFile):
+    object_content = await file.read()
+    image = Image.open(io.BytesIO(object_content))
 
     np_image = np.asanyarray(image)
 
-    custom_model = (ml_models["custom_skincancer_model"])
-    input_image = custom_model.preprocess_img(np_image)
-    pred_label,conf = custom_model.pred_img(input_img=input_image)
-    pred_response = {"predicted_result": pred_label,"confidence":conf}
+    skincancer_obj = ml_models["skincancer_model"]
+    input_image =skincancer_obj.preprocess_img(np_image)
+    pred_class = skincancer_obj._predict(input_image)
+    response_ = {"predicted_label ": pred_class}
+    return response_
 
-    return pred_response
 
 
-@app.post("/predict_catAnddog" )
-async def server_image_to_video_model_controller(file: UploadFile):
-    request_object_content = await file.read()
-    image = Image.open(io.BytesIO(request_object_content))
 
-    np_image = np.asanyarray(image)
-    catdog_model = (ml_models["cat_and_dog_model"])
-    input_image = catdog_model.preprocess_img(np_image)
-    pred_label = catdog_model.pred_img(input_image)
-    pred_response = {"predicted_result": pred_label}
+@app.get("/text_audio",
+          responses={status.HTTP_200_OK:{"content" : {"audio/wav":{}}}},
+          response_class=StreamingResponse,)
 
-    return pred_response
+def serve_text_to_audio(prompt = Query(...),prest : m_autio.VoicePresets = Query(default="v2/en_speaker_9")):
+    #print("user prompt : ",prompt)
+    #print("prest : ",prest)
+
+    output_buffer = ml_models["m_audio"]._predict(data_input = prompt)
+    
+    return StreamingResponse(output_buffer, media_type="audio/wav")
+
+
+
+
 
 
 if __name__ == "__main__":
-    
     uvicorn.run("main:app", host='0.0.0.0', port=8888, reload=True)

@@ -1,4 +1,0 @@
-[core]
-    remote = gcp_bucket
-['remote "gcp_bucket"']
-    url = gs://ths_ml_in_prod_batch_1/single_file/gcp_bucket

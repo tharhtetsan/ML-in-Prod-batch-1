@@ -1,6 +1,6 @@
 outs:
-- md5: 45f782b023ec0d4745ba81d454e1b308.dir
-  size: 19746
+- md5: c8dea0b0a3713ece4119b7ee6f47a30b.dir
+  size: 19748
   nfiles: 1
   hash: md5
   path: gcp_bucket

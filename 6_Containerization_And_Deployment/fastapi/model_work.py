@@ -157,6 +157,66 @@ class m_text:
         
 
 
+
+class m_text:
+    def __init__(self) -> None:
+
+        self.device_name = None
+        if torch.backends.mps.is_available():
+            device_name = "mps" #cuda
+        else:
+            device_name = "cpu"
+
+        self.pipe = None
+        self.system_prompt = """
+        Your name is ML bot and you are a helpful
+        chatbot responsible for teaching  machine learning system to your users.
+        Always respond in markdown.
+        """
+        self.temperature = 0.7
+        
+    
+
+
+
+
+    def load_model(self):
+        self.pipe = pipeline("text-generation",
+                model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+                torch_dtype=torch.bfloat16,
+                device= self.device_name)
+
+
+
+
+    
+    def _predict(self,data_input):
+        if self.pipe is None:
+            return None
+        
+        prompt = data_input
+        messages = [
+        {"role": "system", "content": self.system_prompt},
+        {"role": "user", "content": prompt},
+    ] 
+        prompt = self.pipe.tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+        predictions = self.pipe(
+            prompt,
+            temperature=self.temperature,
+            max_new_tokens=256,
+            do_sample=True,
+            top_k=50,
+            top_p=0.95,
+        ) 
+        output = predictions[0]["generated_text"].split("</s>\n<|assistant|>\n")[-1]
+        return output
+
+
+
+
+
 class m_autio:
     VoicePresets = Literal["v2/en_speaker_1", "v2/en_speaker_9"]
 

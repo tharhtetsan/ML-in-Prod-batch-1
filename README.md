@@ -32,11 +32,11 @@ This repository contains materials for the "Machine Learning Systems for Product
 |4-8-2024|  Basic Deep Learning-3  | - Env Setup for ML project </br> - Tensorflow Basic </br> - Tensorflow Data Generators. </br> - Learning Rate Scheduler <br> - Tensorboard </br> - Model Saving and Loading| [Day-8](https://youtu.be/lMk1IdZvf58)|
 |10-8-2024|   Basic Deep Learning-4  | - Creating Custom Data Generators </br>- Beyond the Sequential Deeplearing models </br>- Saving and Loading custom DL models | [Day-9 <br>(Full version)](https://youtu.be/qR9U2vQRjzQ) |
 |11-8-2024| Setup Production ready ML system. | - Understanding Flask </br> - Env Setup for Dev and Prod </br> - Contrainerization ML project </br> - Getting Start with FastAPI. |  [Day-10 <br>(Full version)](https://youtu.be/Qe3iXw-KDz0)|
-|17-8-2024| Tensorflow Severing | ensorflow Severing Artchitecture and How we can easily use | -|
-|18-8-2024| Getting Start with pySpark | Comparison between Pands and pySpark  | -|
-|24-8-2024| Containerzation for ML Projects  | ( GPU libs ready containers vs predefined ML Images, Custom Install) | -|
-|25-8-2024| ML Systems Deployments (Severbase vs Severless)| - | -|
-|31-8-2024| Cloud Basic | - | -|
+|17-8-2024| Deployment |  Binary Classification ကို Tensorflow နဲ့ တည်ဆောက်ပုံ <br> -  Various type of  Model Saving and Loading techniques. <br> - FastAPI basic  <br> - FastAPI lifespan and asynccontextmanager| [Day-11 <br>(Full version)](https://youtu.be/eB8ufI2C9kQ) |
+|18-8-2024| Getting Start with pySpark | - Async နဲ့ Sync Method တို့ရဲ့ အလုပ်လုပ်ပုံနဲ့ ကွာခြားပုံ <br>- Deploying Custom Tensorflow model <br> - LLM Studio အလုပ်လုပ်ပုံနဲ့ ကျွန်တော်တို့ဘယ်လိုသုံးလို့ရလဲ။<br> - Data Version Problems တွေ နဲ့  Data Version Control မိတ်ဆက်| [Day-12 <br>(Full version)](https://youtu.be/RQgrUp7LGC0) |
+|24-8-2024| Containerzation for ML Projects  |- Text Generation model <br>- Text to Audio model <br> - FastAPI အကြောင်းနှင့်<br> - ML Systems တွေအသုံးများတဲ့ Design Pattern တွေအကြောင်းတွေကိုပြောပြထားပါတယ်။ | [Day-13 <br>(Full version)](https://youtu.be/Xi0oaat50lw) |
+|25-8-2024| ML Systems Deployments | - GCP IAM Setup <br> - Data Version Control<br> - Text Generation Model  | [Day-14 <br>(Full version)](https://youtu.be/Qe3iXw-KDz0)|
+|31-8-2024| Cloud Basic | - | |
 
 
 

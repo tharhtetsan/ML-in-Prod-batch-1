@@ -32,6 +32,12 @@ async def lifespan (app : FastAPI):
     audio_obj.load_model()
     ml_models["m_audio"] = audio_obj
 
+
+
+    text_obj = m_text()
+    text_obj.load_model()
+    ml_models["m_text"] = text_obj
+
     yield
     ml_models.clear()
     
@@ -88,6 +94,8 @@ async def serve_catAnddo(file : UploadFile):
 
 
 
+
+
 @app.get("/text_audio",
           responses={status.HTTP_200_OK:{"content" : {"audio/wav":{}}}},
           response_class=StreamingResponse,)
@@ -102,7 +110,12 @@ def serve_text_to_audio(prompt = Query(...),prest : m_autio.VoicePresets = Query
 
 
 
+@app.get("/text_gen")
+def serve_text_gen(prompt = Query(...)):
+    generated_text = ml_models["m_text"]._predict(data_input = prompt)
 
+    _response = {"generated_text":generated_text}
+    return _response
 
 
 if __name__ == "__main__":

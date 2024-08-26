@@ -268,12 +268,12 @@
         },
         "fastapi": {
             "hashes": [
-                "sha256:b2537146f8c23389a7faa8b03d0bd38d4986e6983874557d95eed2acc46448ef",
-                "sha256:bcbd45817fc2a1cd5da09af66815b84ec0d3d634eb173d1ab468ae3103e183e4"
+                "sha256:3d4729c038414d5193840706907a41839d839523da6ed0c2811f1168cac1798c",
+                "sha256:db84b470bd0e2b1075942231e90e3577e12a903c4dc8696f0d206a7904a7af1c"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==0.112.1"
+            "version": "==0.112.2"
         },
         "filelock": {
             "hashes": [

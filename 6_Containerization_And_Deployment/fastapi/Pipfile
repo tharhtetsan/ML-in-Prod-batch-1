@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 fastapi = "*"
-tensorflow = "==2.14.0"
 uvicorn = "*"
 pillow = "*"
 python-multipart = "*"
@@ -14,6 +13,7 @@ torch = "*"
 transformers = "==4.42.4"
 accelerate = "*"
 soundfile = "*"
+tensorflow = "==2.14.0"
 
 [dev-packages]
 tensorflow-macos = "*"

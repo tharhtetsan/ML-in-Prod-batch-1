@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "861ec8fbce913f79ace467655025d946390cb4e090900d490e0405d7dcccdbd1"
+            "sha256": "2489adb8101edc64c097c68d1a955787b4c33ac3442bcdf0c8cdca966284d345"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -427,11 +427,11 @@
         },
         "httpx": {
             "hashes": [
-                "sha256:71d5465162c13681bff01ad59b2cc68dd838ea1f10e51574bac27103f00c91a5",
-                "sha256:a0cb88a46f32dc874e04ee956e4c2764aba2aa228f650b06788ba6bda2962ab5"
+                "sha256:7bb2708e112d8fdd7829cd4243970f0c223274051cb35ee80c03301ee29a3df0",
+                "sha256:f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==0.27.0"
+            "version": "==0.27.2"
         },
         "huggingface-hub": {
             "hashes": [
@@ -717,6 +717,20 @@
             "index": "pypi",
             "markers": "python_full_version >= '3.7.1'",
             "version": "==1.42.0"
+        },
+        "opencv-python": {
+            "hashes": [
+                "sha256:09a332b50488e2dda866a6c5573ee192fe3583239fb26ff2f7f9ceb0bc119ea6",
+                "sha256:2db02bb7e50b703f0a2d50c50ced72e95c574e1e5a0bb35a8a86d0b35c98c236",
+                "sha256:32dbbd94c26f611dc5cc6979e6b7aa1f55a64d6b463cc1dcd3c95505a63e48fe",
+                "sha256:71e575744f1d23f79741450254660442785f45a0797212852ee5199ef12eed98",
+                "sha256:72d234e4582e9658ffea8e9cae5b63d488ad06994ef12d81dc303b17472f3526",
+                "sha256:9ace140fc6d647fbe1c692bcb2abce768973491222c067c131d80957c595b71f",
+                "sha256:fc182f8f4cda51b45f01c64e4cbedfc2f00aff799debebc305d8d0210c43f251"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.6'",
+            "version": "==4.10.0.84"
         },
         "opt-einsum": {
             "hashes": [
@@ -1283,11 +1297,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:b208925fcb9f7af924ed2dc04708ea89791e24bde0d3020b27df0e116088b34e",
-                "sha256:d59a3e788ab7e012ab2c4baed1b376da6366883ee20d7a5fc426816e3d7b1193"
+                "sha256:0274581a0037b638b9fc1c6883cc71c0210865aaa76073f7882376b641b84e8f",
+                "sha256:a85e96b8be2b906f3e3e789adec6a9323abf79758ecfa3065bd740d81158b11e"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==73.0.1"
+            "version": "==74.0.0"
         },
         "six": {
             "hashes": [

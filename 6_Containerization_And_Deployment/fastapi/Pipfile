@@ -14,6 +14,7 @@ transformers = "==4.42.4"
 accelerate = "*"
 soundfile = "*"
 tensorflow = "==2.14.0"
+opencv-python = "*"
 
 [dev-packages]
 tensorflow-macos = "*"

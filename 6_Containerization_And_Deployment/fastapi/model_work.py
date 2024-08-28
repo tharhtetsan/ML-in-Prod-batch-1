@@ -8,27 +8,34 @@ from tensorflow.keras.models import Model
 from skin_cancer.model import MyModel
 import torch
 from transformers import pipeline,Pipeline
-
+import cv2
 from typing import Literal
 from io import BytesIO
 from transformers import AutoProcessor, AutoModel, Pipeline, pipeline
 import soundfile
 import utils
+from modelWork_template import BaseTemplate
 
-class SkinCancerModel_work(Model):
+class SkinCancerModel_work(BaseTemplate):
     def __init__(self):
-        self.IMG_SIZE = 128
-        self.output_shape = 3
+        self.IMG_SIZE = 256
+        self.output_node = 3
         self.model = None
         self.weight_only_path = os.getcwd()+"/skin_cancer/custom_model.weights.h5"
         self.class_names = ['Melanoma','Benign keratosis-like lesions','Melanocytic nevi']
 
 
     def load_model(self):
-        self.model = MyModel(input_shape=(self.IMG_SIZE,self.IMG_SIZE,3),output_shape=3)
-        optimizer = tf.keras.optimizers.Adam()
+        self.model = MyModel(input_shape=(self.IMG_SIZE,self.IMG_SIZE,3),output_shape=self.output_node)
+        optimizer = tf.keras.optimizers.Adam(learning_rate= 1e-3)
         self.model.compile(loss="categorical_crossentropy",optimizer=optimizer, metrics=["accuracy"])
-        self.load_weights(self.weight_only_path)
+        
+        #need to predict sample image
+        input_img = cv2.imread("test_imgs/bkl_902.jpg")
+        image_reshape = self.preprocess_img(input_img=input_img)
+        self.model.predict(image_reshape)
+
+        self.model.load_weights(self.weight_only_path)
         print("########## skincancer model is loaded ##########")
 
 
@@ -62,7 +69,7 @@ class SkinCancerModel_work(Model):
 
 
 
-class CatAndDogModel_work:
+class CatAndDogModel_work(BaseTemplate):
     def __init__(self):
         self.IMG_SIZE = 150
         self.class_path = os.getcwd()+"/cat_and_dog/class_names.json"
@@ -104,7 +111,7 @@ class CatAndDogModel_work:
         return None
             
 
-class m_text:
+class m_text(BaseTemplate):
     def __init__(self) -> None:
         self.device_name = None
         if torch.backends.mps.is_available():
@@ -158,7 +165,7 @@ class m_text:
 
 
 
-class m_text:
+class m_text(BaseTemplate):
     def __init__(self) -> None:
 
         self.device_name = None
@@ -217,7 +224,7 @@ class m_text:
 
 
 
-class m_autio:
+class m_autio(BaseTemplate):
     VoicePresets = Literal["v2/en_speaker_1", "v2/en_speaker_9"]
 
        

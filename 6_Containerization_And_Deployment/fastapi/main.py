@@ -23,9 +23,9 @@ async def lifespan (app : FastAPI):
     ml_models["cat_and_dog_model"] = CatAndDogModel_obj
 
 
-    #skincancer_obj = SkinCancerModel_work()
-    #skincancer_obj.load_model()
-    #ml_models["skincancer_model"] = skincancer_obj
+    skincancer_obj = SkinCancerModel_work()
+    skincancer_obj.load_model()
+    ml_models["skincancer_model"] = skincancer_obj
     
 
     audio_obj = m_autio()

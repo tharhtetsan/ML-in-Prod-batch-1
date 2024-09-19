@@ -1,0 +1,3 @@
+{
+  "roc_auc_score_unknown_dataset-4": "roc_auc_score(y_true=y_test, y_score=<ndarray>)"
+}

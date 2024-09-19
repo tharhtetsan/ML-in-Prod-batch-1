@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tharhtet/Documents/github/ML-in-Prod-batch-1/8_Experiment_Tracking/mlruns/188622278058537407/ab7a4afde023458d841cfb821c37cc39/artifacts
+end_time: 1726759428279
+entry_point_name: ''
+experiment_id: '188622278058537407'
+lifecycle_stage: active
+run_id: ab7a4afde023458d841cfb821c37cc39
+run_name: debonair-perch-122
+run_uuid: ab7a4afde023458d841cfb821c37cc39
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726759427077
+status: 3
+tags: []
+user_id: tharhtet

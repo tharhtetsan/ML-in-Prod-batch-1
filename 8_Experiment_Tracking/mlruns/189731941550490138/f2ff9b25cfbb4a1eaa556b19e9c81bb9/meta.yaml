@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tharhtet/Documents/github/ML-in-Prod-batch-1/8_Experiment_Tracking/mlruns/189731941550490138/f2ff9b25cfbb4a1eaa556b19e9c81bb9/artifacts
+end_time: 1726758632725
+entry_point_name: ''
+experiment_id: '189731941550490138'
+lifecycle_stage: active
+run_id: f2ff9b25cfbb4a1eaa556b19e9c81bb9
+run_name: colorful-lamb-100
+run_uuid: f2ff9b25cfbb4a1eaa556b19e9c81bb9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726758630336
+status: 3
+tags: []
+user_id: tharhtet

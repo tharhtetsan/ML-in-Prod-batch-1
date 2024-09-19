@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tharhtet/Documents/github/ML-in-Prod-batch-1/8_Experiment_Tracking/mlruns/986783244277383216/a059750886f143dd97bfa54f0ccb083a/artifacts
+end_time: 1726761063983
+entry_point_name: ''
+experiment_id: '986783244277383216'
+lifecycle_stage: active
+run_id: a059750886f143dd97bfa54f0ccb083a
+run_name: test_run
+run_uuid: a059750886f143dd97bfa54f0ccb083a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726761062984
+status: 3
+tags: []
+user_id: tharhtet

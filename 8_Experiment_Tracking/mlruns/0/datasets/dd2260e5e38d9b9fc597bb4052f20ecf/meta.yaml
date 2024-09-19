@@ -1,0 +1,15 @@
+digest: 4766e647
+name: dataset
+profile: '{"num_rows": 5197, "num_elements": 62364}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "fixed_acidity", "required":
+  true}, {"type": "double", "name": "volatile_acidity", "required": true}, {"type":
+  "double", "name": "citric_acid", "required": true}, {"type": "double", "name": "residual_sugar",
+  "required": true}, {"type": "double", "name": "chlorides", "required": true}, {"type":
+  "double", "name": "free_sulfur_dioxide", "required": true}, {"type": "double", "name":
+  "total_sulfur_dioxide", "required": true}, {"type": "double", "name": "density",
+  "required": true}, {"type": "double", "name": "pH", "required": true}, {"type":
+  "double", "name": "sulphates", "required": true}, {"type": "double", "name": "alcohol",
+  "required": true}, {"type": "long", "name": "is_red", "required": true}]}'
+source: '{"tags": {"mlflow.user": "tharhtet", "mlflow.source.name": "/opt/anaconda3/envs/ths/lib/python3.10/site-packages/ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

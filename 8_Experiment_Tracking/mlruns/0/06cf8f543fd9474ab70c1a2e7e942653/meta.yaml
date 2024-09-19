@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/06cf8f543fd9474ab70c1a2e7e942653/artifacts
+end_time: 1726760948893
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 06cf8f543fd9474ab70c1a2e7e942653
+run_name: upset-chimp-852
+run_uuid: 06cf8f543fd9474ab70c1a2e7e942653
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726760948773
+status: 3
+tags: []
+user_id: tharhtet

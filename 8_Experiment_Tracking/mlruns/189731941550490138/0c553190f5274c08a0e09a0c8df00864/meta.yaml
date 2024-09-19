@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/tharhtet/Documents/github/ML-in-Prod-batch-1/8_Experiment_Tracking/mlruns/189731941550490138/0c553190f5274c08a0e09a0c8df00864/artifacts
+deleted_time: 1726756315108
+end_time: 1726756277983
+entry_point_name: ''
+experiment_id: '189731941550490138'
+lifecycle_stage: deleted
+run_id: 0c553190f5274c08a0e09a0c8df00864
+run_name: dashing-toad-556
+run_uuid: 0c553190f5274c08a0e09a0c8df00864
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726756277006
+status: 3
+tags: []
+user_id: tharhtet

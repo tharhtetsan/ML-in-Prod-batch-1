@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/tharhtet/Documents/github/ML-in-Prod-batch-1/8_Experiment_Tracking/mlruns/188622278058537407/ce1986c938e44953ab542b0488cb7738/artifacts
+deleted_time: 1726759383827
+end_time: 1726752831420
+entry_point_name: ''
+experiment_id: '188622278058537407'
+lifecycle_stage: deleted
+run_id: ce1986c938e44953ab542b0488cb7738
+run_name: nervous-lynx-610
+run_uuid: ce1986c938e44953ab542b0488cb7738
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726752829072
+status: 3
+tags: []
+user_id: tharhtet

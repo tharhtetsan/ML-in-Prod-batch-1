@@ -1,6 +1,0 @@
-artifact_location: file:///Users/tharhtet/Documents/github/ML-in-Prod-batch-1/8_Experiment_Tracking/mlruns/986783244277383216
-creation_time: 1726761035241
-experiment_id: '986783244277383216'
-last_update_time: 1726761035241
-lifecycle_stage: active
-name: v4_end_to_end_mlflow

@@ -185,3 +185,4 @@ cython_debug/
 10_Pipeline_Orchestration/service_account.json
 10_Pipeline_Orchestration/local_airflow/dags/service_account/service_account.json
 
+/8_Experiment_Tracking/mlartifacts

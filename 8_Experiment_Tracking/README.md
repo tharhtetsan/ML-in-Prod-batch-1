@@ -11,6 +11,6 @@ mlflow server --host 127.0.0.1 --port 8080
 
 ### MLflow with Custom database backend
 ```bash
-mlflow server  --host 127.0.0.1 --port 8080 --backend-store-uri sqlite:///mlruns.db
+mlflow ui  --host 127.0.0.1 --port 8080 --backend-store-uri sqlite:///mlruns.db
 
 ```

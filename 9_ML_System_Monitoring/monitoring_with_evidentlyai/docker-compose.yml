@@ -8,11 +8,13 @@ networks:
   back-tier:
 
 services:
-  db:
-    image: postgres
+  postgres:
+    image: postgres:14.0
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
+        POSTGRES_PASSWORD: tharhtet
+        POSTGRES_DB: test_db
+
     ports:
       - "5432:5432"
     networks:

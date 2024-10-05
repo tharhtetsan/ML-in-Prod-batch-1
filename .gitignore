@@ -187,3 +187,4 @@ cython_debug/
 
 /8_Experiment_Tracking/mlartifacts
 /9_ML_System_Monitoring/monitoring_with_evidentlyai/models
+/9_ML_System_Monitoring/monitoring_with_evidentlyai/workspace

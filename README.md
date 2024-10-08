@@ -30,13 +30,13 @@ This repository contains materials for the "Machine Learning Systems for Product
 |-----|-----|-----|-----|
 |3-8-2024| Basic DL Algorithms - 2 | - CNN Details. </br> - How calculate trainable parameters. </br> - Why CNN is better than ANN in Computer vision problem.   | [Day-7](https://youtu.be/6qaSiebD5ZQ)|
 |4-8-2024|  Basic Deep Learning-3  | - Env Setup for ML project </br> - Tensorflow Basic </br> - Tensorflow Data Generators. </br> - Learning Rate Scheduler <br> - Tensorboard </br> - Model Saving and Loading| [Day-8](https://youtu.be/lMk1IdZvf58)|
-|10-8-2024|   Basic Deep Learning-4  | - Creating Custom Data Generators </br>- Beyond the Sequential Deeplearing models </br>- Saving and Loading custom DL models | [Day-9 <br>(Full version)](https://youtu.be/qR9U2vQRjzQ) |
-|11-8-2024| Setup Production ready ML system. | - Understanding Flask </br> - Env Setup for Dev and Prod </br> - Contrainerization ML project </br> - Getting Start with FastAPI. |  [Day-10 <br>(Full version)](https://youtu.be/Qe3iXw-KDz0)|
-|17-8-2024| Deployment |  Binary Classification ကို Tensorflow နဲ့ တည်ဆောက်ပုံ <br> -  Various type of  Model Saving and Loading techniques. <br> - FastAPI basic  <br> - FastAPI lifespan and asynccontextmanager| [Day-11 <br>(Full version)](https://youtu.be/eB8ufI2C9kQ) |
-|18-8-2024| Getting Start with pySpark | - Async နဲ့ Sync Method တို့ရဲ့ အလုပ်လုပ်ပုံနဲ့ ကွာခြားပုံ <br>- Deploying Custom Tensorflow model <br> - LLM Studio အလုပ်လုပ်ပုံနဲ့ ကျွန်တော်တို့ဘယ်လိုသုံးလို့ရလဲ။<br> - Data Version Problems တွေ နဲ့  Data Version Control မိတ်ဆက်| [Day-12 <br>(Full version)](https://youtu.be/RQgrUp7LGC0) |
-|24-8-2024| Containerzation for ML Projects  |- Text Generation model <br>- Text to Audio model <br> - FastAPI အကြောင်းနှင့်<br> - ML Systems တွေအသုံးများတဲ့ Design Pattern တွေအကြောင်းတွေကိုပြောပြထားပါတယ်။ | [Day-13 <br>(Full version)](https://youtu.be/Xi0oaat50lw) |
-|25-8-2024| ML Systems Deployments | - GCP IAM Setup <br> - Data Version Control<br> - Text Generation Model  | [Day-14 <br>(Full version)](https://youtu.be/Qe3iXw-KDz0)|
-|31-8-2024| Cloud Basic | - | |
+|10-8-2024|   Basic Deep Learning-4  | - Creating Custom Data Generators </br>- Beyond the Sequential Deeplearing models </br>- Saving and Loading custom DL models | [Day-9 <br>](https://youtu.be/qR9U2vQRjzQ) |
+|11-8-2024| Setup Production ready ML system. | - Understanding Flask </br> - Env Setup for Dev and Prod </br> - Contrainerization ML project </br> - Getting Start with FastAPI. |  [Day-10 <br>](https://youtu.be/Qe3iXw-KDz0)|
+|17-8-2024| Deployment |  Binary Classification ကို Tensorflow နဲ့ တည်ဆောက်ပုံ <br> -  Various type of  Model Saving and Loading techniques. <br> - FastAPI basic  <br> - FastAPI lifespan and asynccontextmanager| [Day-11 <br>](https://youtu.be/eB8ufI2C9kQ) |
+|18-8-2024| Getting Start with pySpark | - Async နဲ့ Sync Method တို့ရဲ့ အလုပ်လုပ်ပုံနဲ့ ကွာခြားပုံ <br>- Deploying Custom Tensorflow model <br> - LLM Studio အလုပ်လုပ်ပုံနဲ့ ကျွန်တော်တို့ဘယ်လိုသုံးလို့ရလဲ။<br> - Data Version Problems တွေ နဲ့  Data Version Control မိတ်ဆက်| [Day-12 <br>](https://youtu.be/RQgrUp7LGC0) |
+|24-8-2024| Containerzation for ML Projects  |- Text Generation model <br>- Text to Audio model <br> - FastAPI အကြောင်းနှင့်<br> - ML Systems တွေအသုံးများတဲ့ Design Pattern တွေအကြောင်းတွေကိုပြောပြထားပါတယ်။ | [Day-13 <br>](https://youtu.be/Xi0oaat50lw) |
+|25-8-2024| ML Systems Deployments | - GCP IAM Setup <br> - Data Version Control<br> - Text Generation Model  | [Day-14 <br>](https://youtu.be/Qe3iXw-KDz0)|
+|31-8-2024| Deploy ML project on CloudRun| - Abstractmethod in ML proj <br> - IAM in Google Cloud Platform <br>- GCP Cost Calculator <br>- CloudRun <br>- Dev/Stg/Prod Setup <br>- Github Action vs Third party triggers | [Day-15 <br>](https://youtu.be/PxJe-zDmmxA)|
 
 
 
@@ -45,10 +45,10 @@ This repository contains materials for the "Machine Learning Systems for Product
 
 |Date | Title | Description | Reference |
 |-----|-----|-----|-----|
-|1-9-2024| Data and Model versioning | DVC, DagsHub and other s data versioning tools | -|
-|7-9-2024| ML Lifecycle management | Experiment Tracking and model setup for production | -|
-|8-9-2024| Meachine Learning System best practice-1 | Putting all the things that we learned to get better ML System. | -|
-|14-9-2024| Pipeline Orchestration with Prefect-1| - | -|
+|1-9-2024| ML deployment using Custom CI/CD pipeline setup |- Setting up custom ci/cd pipeline  setup. <br>- prod/stg/dev environment setup.<br>- GCP cost calculation and discounts.<br>- system based libs vs normal libs <br>- [Project-1: ML System on Serverless with custom CI/CD](https://github.com/tharhtetsan/ML_in_Prod_batch_1_proj) |[Day-16 <br>](https://youtu.be/qxktCHfp8p8)|
+|7-9-2024| Cloud Build Speed Up and libs handling | - OS based libs Error handling <br> - Speed up the building process | [Day-17](https://youtu.be/n4kMRYa0g1E)|
+|8-9-2024| Deploy Text to Audio Model and Start with GCE  |- Serverless vs Serverbase<br> - Autoscaling in CloudRun <br> - Serverless challenges for ML systems <br> - Compute Engine | [Day-18](https://youtu.be/DUpJJsW1k9Y)|
+|14-9-2024| Manage Instance Group and GCE CI/CD | - Compute Engine <br> - Instance Templates and how it works <br> - Mange Instance Group <br> - Artifact Registry and how can we use it.<br> - CI/CD Setup for Manage Instance Group(MIG) | [Day-19](https://youtu.be/5AU0rKYVrDQ) |
 |15-9-2024| Pipeline Orchestration with Prefect-2| - | -|
 |21-9-2024| Pipeline Orchestration with Airflow-1 | - | -|
 |22-9-2024| Pipeline Orchestration with Airflow-2 | - | -|

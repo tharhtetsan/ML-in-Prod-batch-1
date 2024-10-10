@@ -41,29 +41,29 @@ This repository contains materials for the "Machine Learning Systems for Product
 
 
 #### September 2024
-##### Category : <b> MLOps Tools </b>
+##### Category : <b> MLOps Tools, Cloud essentials, model and experiment tracking </b>
 
 |Date | Title | Description | Reference |
 |-----|-----|-----|-----|
 |1-9-2024| ML deployment using Custom CI/CD pipeline setup |- Setting up custom ci/cd pipeline  setup. <br>- prod/stg/dev environment setup.<br>- GCP cost calculation and discounts.<br>- system based libs vs normal libs <br>- [Project-1: ML System on Serverless with custom CI/CD](https://github.com/tharhtetsan/ML_in_Prod_batch_1_proj) |[Day-16 <br>](https://youtu.be/qxktCHfp8p8)|
 |7-9-2024| Cloud Build Speed Up and libs handling | - OS based libs Error handling <br> - Speed up the building process | [Day-17](https://youtu.be/n4kMRYa0g1E)|
 |8-9-2024| Deploy Text to Audio Model and Start with GCE  |- Serverless vs Serverbase<br> - Autoscaling in CloudRun <br> - Serverless challenges for ML systems <br> - Compute Engine | [Day-18](https://youtu.be/DUpJJsW1k9Y)|
-|14-9-2024| Manage Instance Group and GCE CI/CD | - Compute Engine <br> - Instance Templates and how it works <br> - Mange Instance Group <br> - Artifact Registry and how can we use it.<br> - CI/CD Setup for Manage Instance Group(MIG) | [Day-19](https://youtu.be/5AU0rKYVrDQ) |
-|15-9-2024| Pipeline Orchestration with Prefect-2| - | -|
-|21-9-2024| Pipeline Orchestration with Airflow-1 | - | -|
-|22-9-2024| Pipeline Orchestration with Airflow-2 | - | -|
-|28-9-2024| Introduction to Databricks and databricks pipelines-1 | - | -|
-|29-9-2024| Introduction to Databricks and databricks pipelines-2 | - | -|
+|14-9-2024| Manage Instance Group and GCE CI/CD | - Compute Engine <br> - Instance Templates and how it works <br> - Mange Instance Group <br> - Artifact Registry and how can we use it.<br> - CI/CD Setup for Manage Instance Group(MIG) <br> [Project-2: ML System on MIG with custom CI/CD](https://github.com/tharhtetsan/ML_in_Prod_batch_1_proj2)| [Day-19](https://youtu.be/5AU0rKYVrDQ) |
+|15-9-2024| IMG Templates and Container images handling | - Manage Instance Group Template <br> - CI/CD setup for stg and prod <br> - Cloud Functions logic and how we can use it. <br> - Handling old  MIG templates <br> - Cloud Scheduler <br> - Introduction to MLflow | [Day-20](https://youtu.be/uNDj4MdBu0k)|
+|21-9-2024|  Experiment Tracking with MLflow Part-1 | - Experiment Tracking logic and why <br> - Popular experiment tools <br> - MLflow env <br> - MLflow runs handling <br> - Auto logging  vs manual logging in MLflow <br> - sklearn model training and inference with MLflow | [Day-21](https://youtu.be/ueC9GvqAgQ8) |
+|22-9-2024| Experiment Tracking with MLflow Part-2  | - System metrics and GPU metrics logging in MLflow <br> - Run Id searching <br> - Add MLflow tracking in Tensorflow notebook <br> - Model signature and TF model logging <br> - MLflow model registry <br> - Register model name and version <br> - Loading the model by tag | [Day-22](https://youtu.be/kfVgvIINjbU) |
+|28-9-2024| Sorry guys!<br> ThaHtet was sick on that day  🥹 | - | -|
+|29-9-2024| Secure MLflow Server for Org Part-1 | - Setup Secure MLflow Server for the Org. <br> - Cloud SQL <br> - Cloud Storage Object <br> - GCP Secret Manager <br> [Project-3:Secure MLflow Server setup for production](https://github.com/tharhtetsan/Secure-MLflow-Server-for-production)| [Day-23](https://youtu.be/ZImUpfdTvxM)|
 
 
 
 
 #### October 2024
-##### Category : <b> MLOps Tools, Cloud Basic, Monitoring and tracking </b>
+##### Category : <b> MLOps Tools, Monitoring, Piplines</b>
 |Date | Title | Description | Reference |
 |-----|-----|-----|-----|
-|5-10-2024| Logging and Monitoring |-----|-----|
-|6-10-2024| Monitoring with Pub/Sub |-----|-----|
+|5-10-2024| Experiment Tracking with MLflow and Monitoring Part-1 |- MLflow server on CloudRun <br> - Why we need monitoring in ML Systems. <br> - Data drift <br> - Concept drift <br> - Model drift vs Data drift vs Concept drift <br> - Introduction to evidentlyai|[Day-24](https://youtu.be/UhsQGZb0p8M)|
+|6-10-2024| ML Systems Monitoring Part-2 |- Evidentlyai Report <br> - Evidentlyai data drift sample <br> - Sample logging and monitoring with grafana|[Day-25](https://youtu.be/LQPv1MGqieo)|
 |12-10-2024| CI/CD Setup for ML Systems |-----|-----|
 |13-10-2024| CI/CD best practice |-----|-----|
 |19-10-2024| Continous Training for ML Systems-1 |-----|-----|

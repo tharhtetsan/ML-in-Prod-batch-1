@@ -6,6 +6,7 @@ def extract(path):
     with open(path, "r") as file:
         text = file.readline().strip()
     data=  text.split(",")
+    print("extract : ",data)
     return data
 
 def multi_tran(num):
@@ -14,6 +15,7 @@ def multi_tran(num):
 @task
 def transform(data):
     tran_data = [multi_tran(  int(i))+1 for i in data]
+    print("tran_data : ",tran_data)
     return tran_data
 
 @task
@@ -22,6 +24,8 @@ def load_text(data,path):
     with open(path, "w") as file:
         csv_writer = csv.writer(file)
         csv_writer.writerow(data)
+
+    print("write CSV")
 
 @flow()
 def main():

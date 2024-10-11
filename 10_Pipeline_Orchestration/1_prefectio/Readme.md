@@ -1,4 +1,4 @@
-## 4. Pipeline Orchestration 
+### Pipeline Orchestration with Prefectio
 
 <img src="images/prefect.PNG" style="zoom: 67%;" />
 
@@ -8,35 +8,20 @@ Another type of ML pipeline is the art of splitting up your machine learning wor
 
 This goes hand-in-hand with the recent push for microservices architectures, branching off the main idea that by splitting your application into basic and siloed parts you can build more powerful software over time. In this part we will use [prefect.io](https://www.prefect.io/) pipeline orchestration. 
 
+#### Commandas
+```bash
+pip install -U prefect
+
+# start server
+prefect server start
+
+prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# still task in port 4200
+alias ngf='kill -9  $(lsof -t -i:4200);ng serve'
+```
 
 
 

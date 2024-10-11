@@ -1,31 +1,18 @@
-from http import server
 from prefect import flow
 
+
 @flow
-def myflow():
-    print("hello")
-
-from prefect.deployments import Deployment
-from prefect.orion.schemas.schedules import IntervalSchedule
-
-from datetime import timedelta
-
-deployment_dev = Deployment.build_from_flow(
-    flow=myflow,
-    name="model_training_dev",
-    schedule = IntervalSchedule(interval=timedelta(minutes=3)),
-    work_queue_name = "dev",
-
-)
-
-deployment_dev.apply()
+def my_flow():
+    print("Hello Monday Data!")
 
 
-deployment_prod = Deployment.build_from_flow(
-    flow=myflow,
-    name="model_training-prod",
-    schedule=IntervalSchedule(interval=timedelta(minutes=5)),
-    work_queue_name="prod"
-)
+"""
+20: Minute (20th minute)
+8: Hour (8 AM)
+*: Every day of the month
+*: Every month
+1: Monday (where 0 is Sunday, 1 is Monday, and so on)
+"""
 
-deployment_prod.apply()
+if __name__ == "__main__":
+    my_flow.serve(name="prepare_data", cron="20 8 * * 1")

@@ -1,0 +1,4 @@
+mlflow
+pandas
+seaborn
+prefect==2.3.1

@@ -1,4 +1,4 @@
-<img src="./images/data_orchestration.png" alt="python logo" width="850" height="350" />
+<img src="./images/data_orchestration.png" alt="python logo" width="750" height="400" />
 
 ### ဘာလို့ 𝗗𝗮𝘁𝗮 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻 လိုအပ်တာလဲ?
 အစရှိတဲ့ မေးခွန်းတွေ ဖြေဖို့အတွက်ဆိုရင် ကျွန်တော်တို့တွေ အရင်ခေတ်က 𝐝𝐚𝐭𝐚 𝐬𝐲𝐬𝐭𝐞𝐦 တွေနဲ့ ဒီဘက်ခေတ် 𝐝𝐚𝐭𝐚 𝐬𝐲𝐬𝐭𝐞𝐦 တွေကိုယှဉ်ကြည့်ဖို့လိုပါမယ်။

@@ -64,8 +64,8 @@ This repository contains materials for the "Machine Learning Systems for Product
 |-----|-----|-----|-----|
 |5-10-2024| Experiment Tracking with MLflow and Monitoring Part-1 |- MLflow server on CloudRun <br> - Why we need monitoring in ML Systems. <br> - Data drift <br> - Concept drift <br> - Model drift vs Data drift vs Concept drift <br> - Introduction to evidentlyai|[Day-24](https://youtu.be/UhsQGZb0p8M)|
 |6-10-2024| ML Systems Monitoring Part-2 |- Evidentlyai Report <br> - Evidentlyai data drift sample <br> - Sample logging and monitoring with grafana|[Day-25](https://youtu.be/LQPv1MGqieo)|
-|12-10-2024| CI/CD Setup for ML Systems |-----|-----|
-|13-10-2024| CI/CD best practice |-----|-----|
+|12-10-2024| ML Systems Monitoring Part-3 |- How to use Evidentlyai for real world case. <br> - Introduction to Prefectio |[Day-26](https://youtu.be/YAz1-LwG0FU)|
+|13-10-2024| Data Orchestration Part-1 |- Prefect deployment and Scheduling <br> - Introduction to Data Orchestration <br> - MLOps system levels <br> - Introduction to Airflow| [Day-27](https://youtu.be/BGhwjB05DVA) |
 |19-10-2024| Continous Training for ML Systems-1 |-----|-----|
 |20-10-2024| Continous Training for ML Systems-2|-----|-----|
 |26-10-2024| Kubernetes Basic-1| - | -|

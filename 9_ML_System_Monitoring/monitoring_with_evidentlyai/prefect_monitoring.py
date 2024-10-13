@@ -2,6 +2,7 @@ import datetime
 import pandas as pd
 import joblib
 import psycopg
+from prefect import task,flow
 from evidently.report import Report
 from evidently import ColumnMapping
 from evidently.metrics import ColumnDriftMetric, DatasetDriftMetric, DatasetMissingValuesMetric
@@ -57,7 +58,7 @@ create table dummy_metrics(
 """
 
 
-
+@task
 def prep_db():
 	with psycopg.connect("host=localhost port=5432 user=postgres password=tharhtet", autocommit=True) as conn:
 		res = conn.execute("SELECT 1 FROM pg_database WHERE datname='test_db'")
@@ -66,6 +67,7 @@ def prep_db():
 		with psycopg.connect("host=localhost port=5432 dbname=test_db user=postgres password=tharhtet") as conn:
 			conn.execute(create_table_statement)
 
+@task
 def calculate_dummy_metrics_postgresql(curr,i):
 	current_data = raw_data[(raw_data.lpep_pickup_datetime >= (begin + datetime.timedelta(i))) &
 		(raw_data.lpep_pickup_datetime < (begin + datetime.timedelta(i + 1)))]	
@@ -88,7 +90,7 @@ def calculate_dummy_metrics_postgresql(curr,i):
 
 
 
-
+@flow()
 def batch_monitoring_backfill():
 	prep_db()
 	last_send = datetime.datetime.now() - datetime.timedelta(seconds=10)
@@ -106,4 +108,6 @@ def batch_monitoring_backfill():
 				last_send = last_send + datetime.timedelta(seconds=10)
 			logging.info("data sent")
 
-batch_monitoring_backfill()
+
+if __name__=="__main__":
+	batch_monitoring_backfill.serve(name="batch_monitoring_backfill", cron="20 8 * * 1")

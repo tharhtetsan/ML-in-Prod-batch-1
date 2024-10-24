@@ -3,13 +3,13 @@ from datetime import datetime
 from airflow.operators.python import PythonOperator
 
 def print_a():
-    print("hello from task a")
+    print("hello from task aaa")
 
 def print_b():
-    print("hello from task b")
+    print("hello from task bbb")
 
 
-with DAG("v4_helloworld", start_date=datetime(2024,8,12), 
+with DAG("helloworld", start_date=datetime(2024,8,12), 
         description="This is a hello world pipeline", tags=["hello"],
         schedule='@daily',catchup=False ):
 

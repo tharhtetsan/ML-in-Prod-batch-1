@@ -6,7 +6,7 @@ from airflow import DAG
 import os
 
 DESTINATION_BUCKET_NAME = 'mlflow_ths_server'
-FILE_NAME = "airflow_test/sample_vehicle_history.csv"
+FILE_NAME = "airflow_test/winequality-white.csv"
 
 #/opt/airflow/dags/service_account/service_account.json
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getcwd()+"/dags/service_account/service_account.json"
@@ -37,9 +37,9 @@ with DAG(
     )
 
 
-    check_exist_file = GCSObjectUpdateSensor(
+    check_exist_file = GCSObjectExistenceSensor(
             bucket=DESTINATION_BUCKET_NAME,
-            object="airflow_test",
+            object="airflow_test/",
             task_id="gcs_object_exist_sensor_task",
             poke_interval=60,  # Check every minute
             timeout=60 * 60,   # Timeout after 1 hour

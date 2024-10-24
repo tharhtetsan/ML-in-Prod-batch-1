@@ -1,4 +1,4 @@
-from airflow.providers.google.cloud.sensors.gcs import GCSObjectUpdateSensor,GCSObjectExistenceSensor
+from airflow.providers.google.cloud.sensors.gcs import GCSObjectUpdateSensor,GCSObjectExistenceSensor,GCSObjectsWithPrefixExistenceSensor
 
 from datetime import datetime
 from airflow.operators.python import PythonOperator
@@ -10,6 +10,11 @@ FILE_NAME = "airflow_test/winequality-white.csv"
 
 #/opt/airflow/dags/service_account/service_account.json
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getcwd()+"/dags/service_account/service_account.json"
+
+
+
+#https://airflow.apache.org/docs/apache-airflow-providers-google/stable/_api/airflow/providers/google/cloud/sensors/gcs/index.html#airflow.providers.google.cloud.sensors.gcs.GCSObjectsWithPrefixExistenceSensor
+
 
 def _print_env():
     print(os.getenv('GOOGLE_APPLICATION_CREDENTIALS'))
@@ -46,13 +51,20 @@ with DAG(
     )
 
 
-
+    check_update_folder = GCSObjectsWithPrefixExistenceSensor(
+                bucket=DESTINATION_BUCKET_NAME,
+                prefix="airflow_test/winequality-white",
+                task_id="gcs_object_update_folder_sensor_task",
+                poke_interval=60,  # Check every minute
+                timeout=60 * 60,   # Timeout after 1 hour
+        )
+    
     
 
     task_a = PythonOperator(task_id ='task_a', python_callable=_print_env)
 
     task_b = PythonOperator(task_id ='task_b', python_callable=file_changes)
 
-
-task_a >> check_update_file >> task_b
+check_update_file
+task_a >> check_update_folder >> task_b
 task_a >> check_exist_file >> task_b
